@@ -44,12 +44,6 @@ namespace Employee
         {
 
         }
-
-        private void InsertBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
 

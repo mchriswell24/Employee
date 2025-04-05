@@ -32,7 +32,6 @@
             textBox2 = new TextBox();
             DeleteBtn = new Button();
             UpdateBtn = new Button();
-            InsertBtn = new Button();
             LoanAmountBtn = new TextBox();
             textBox8 = new TextBox();
             dataGridView3 = new DataGridView();
@@ -41,6 +40,8 @@
             dateTimePicker1 = new DateTimePicker();
             textBox3 = new TextBox();
             BackBtn = new Button();
+            CreateBtn = new Button();
+            EditBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             SuspendLayout();
             // 
@@ -68,9 +69,9 @@
             // 
             DeleteBtn.FlatStyle = FlatStyle.Popup;
             DeleteBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            DeleteBtn.Location = new Point(720, 499);
+            DeleteBtn.Location = new Point(896, 499);
             DeleteBtn.Name = "DeleteBtn";
-            DeleteBtn.Size = new Size(75, 29);
+            DeleteBtn.Size = new Size(75, 36);
             DeleteBtn.TabIndex = 50;
             DeleteBtn.Text = "Delete";
             DeleteBtn.UseVisualStyleBackColor = true;
@@ -80,25 +81,13 @@
             // 
             UpdateBtn.FlatStyle = FlatStyle.Popup;
             UpdateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            UpdateBtn.Location = new Point(507, 499);
+            UpdateBtn.Location = new Point(708, 499);
             UpdateBtn.Name = "UpdateBtn";
-            UpdateBtn.Size = new Size(86, 29);
+            UpdateBtn.Size = new Size(86, 36);
             UpdateBtn.TabIndex = 49;
             UpdateBtn.Text = "Update";
             UpdateBtn.UseVisualStyleBackColor = true;
             UpdateBtn.Click += UpdateBtn_Click;
-            // 
-            // InsertBtn
-            // 
-            InsertBtn.FlatStyle = FlatStyle.Popup;
-            InsertBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            InsertBtn.Location = new Point(359, 499);
-            InsertBtn.Name = "InsertBtn";
-            InsertBtn.Size = new Size(75, 29);
-            InsertBtn.TabIndex = 48;
-            InsertBtn.Text = "Insert";
-            InsertBtn.UseVisualStyleBackColor = true;
-            InsertBtn.Click += InsertBtn_Click;
             // 
             // LoanAmountBtn
             // 
@@ -186,12 +175,36 @@
             BackBtn.UseVisualStyleBackColor = true;
             BackBtn.Click += BackBtn_Click;
             // 
+            // CreateBtn
+            // 
+            CreateBtn.FlatStyle = FlatStyle.Popup;
+            CreateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            CreateBtn.Location = new Point(359, 499);
+            CreateBtn.Name = "CreateBtn";
+            CreateBtn.Size = new Size(75, 36);
+            CreateBtn.TabIndex = 56;
+            CreateBtn.Text = "Create";
+            CreateBtn.UseVisualStyleBackColor = true;
+            // 
+            // EditBtn
+            // 
+            EditBtn.FlatStyle = FlatStyle.Popup;
+            EditBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            EditBtn.Location = new Point(531, 499);
+            EditBtn.Name = "EditBtn";
+            EditBtn.Size = new Size(75, 36);
+            EditBtn.TabIndex = 57;
+            EditBtn.Text = "Edit";
+            EditBtn.UseVisualStyleBackColor = true;
+            // 
             // LoanInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(992, 571);
+            Controls.Add(EditBtn);
+            Controls.Add(CreateBtn);
             Controls.Add(BackBtn);
             Controls.Add(textBox3);
             Controls.Add(dateTimePicker1);
@@ -199,7 +212,6 @@
             Controls.Add(textBox2);
             Controls.Add(DeleteBtn);
             Controls.Add(UpdateBtn);
-            Controls.Add(InsertBtn);
             Controls.Add(LoanAmountBtn);
             Controls.Add(textBox8);
             Controls.Add(dataGridView3);
@@ -220,7 +232,6 @@
         private TextBox textBox2;
         private Button DeleteBtn;
         private Button UpdateBtn;
-        private Button InsertBtn;
         private TextBox LoanAmountBtn;
         private TextBox textBox8;
         private DataGridView dataGridView3;
@@ -229,5 +240,7 @@
         private DateTimePicker dateTimePicker1;
         private TextBox textBox3;
         private Button BackBtn;
+        private Button CreateBtn;
+        private Button EditBtn;
     }
 }
