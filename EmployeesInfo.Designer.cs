@@ -48,6 +48,7 @@
             dataGridView1 = new DataGridView();
             SearchBtn = new TextBox();
             textBox1 = new TextBox();
+            BackBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -261,12 +262,25 @@
             textBox1.TabIndex = 22;
             textBox1.Text = "Employee's Information";
             // 
+            // BackBtn
+            // 
+            BackBtn.FlatStyle = FlatStyle.Popup;
+            BackBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BackBtn.Location = new Point(936, -1);
+            BackBtn.Name = "BackBtn";
+            BackBtn.Size = new Size(59, 35);
+            BackBtn.TabIndex = 42;
+            BackBtn.Text = "X";
+            BackBtn.UseVisualStyleBackColor = true;
+            BackBtn.Click += BackBtn_Click;
+            // 
             // EmployeesInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(992, 571);
+            Controls.Add(BackBtn);
             Controls.Add(AddressBtn);
             Controls.Add(DeleteBtn);
             Controls.Add(UpdateBtn);
@@ -318,5 +332,6 @@
         private DataGridView dataGridView1;
         private TextBox SearchBtn;
         private TextBox textBox1;
+        private Button BackBtn;
     }
 }

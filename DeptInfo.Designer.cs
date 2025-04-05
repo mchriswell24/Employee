@@ -38,6 +38,7 @@
             textBox2 = new TextBox();
             DeptDescriBtn = new TextBox();
             DeptCodeBtn = new TextBox();
+            BackBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
@@ -113,9 +114,11 @@
             textBox1.Font = new Font("Segoe Script", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(305, 43);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(429, 52);
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(458, 52);
             textBox1.TabIndex = 22;
             textBox1.Text = "Department  Information";
+            textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox2
             // 
@@ -145,12 +148,25 @@
             DeptCodeBtn.TabIndex = 43;
             DeptCodeBtn.TextChanged += DeptCodeBtn_TextChanged;
             // 
+            // BackBtn
+            // 
+            BackBtn.FlatStyle = FlatStyle.Popup;
+            BackBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BackBtn.Location = new Point(929, -1);
+            BackBtn.Name = "BackBtn";
+            BackBtn.Size = new Size(66, 37);
+            BackBtn.TabIndex = 44;
+            BackBtn.Text = "X";
+            BackBtn.UseVisualStyleBackColor = true;
+            BackBtn.Click += BackBtn_Click;
+            // 
             // DeptInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(992, 571);
+            Controls.Add(BackBtn);
             Controls.Add(DeptCodeBtn);
             Controls.Add(DeptDescriBtn);
             Controls.Add(textBox2);
@@ -182,5 +198,6 @@
         private TextBox textBox2;
         private TextBox DeptDescriBtn;
         private TextBox DeptCodeBtn;
+        private Button BackBtn;
     }
 }

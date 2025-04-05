@@ -64,5 +64,13 @@ namespace Employee
         {
 
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+
+            MenuInfo menuForm = new MenuInfo();
+            menuForm.Show();
+            this.Close();
+        }
     }
 }

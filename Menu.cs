@@ -39,7 +39,7 @@ namespace Employee
         }
         private void EmployeeInfoBtn_Click(object sender, EventArgs e)
         {
-            EmployeeInfo empInfoForm = new EmployeeInfo();
+            EmployeesInfo empInfoForm = new EmployeesInfo();
             empInfoForm.Show();
 
             this.Hide();

@@ -40,6 +40,7 @@
             textBox1 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             textBox3 = new TextBox();
+            BackBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             SuspendLayout();
             // 
@@ -173,12 +174,25 @@
             textBox3.Text = "DATE";
             textBox3.TextAlign = HorizontalAlignment.Center;
             // 
+            // BackBtn
+            // 
+            BackBtn.FlatStyle = FlatStyle.Popup;
+            BackBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BackBtn.Location = new Point(932, -1);
+            BackBtn.Name = "BackBtn";
+            BackBtn.Size = new Size(61, 31);
+            BackBtn.TabIndex = 55;
+            BackBtn.Text = "X";
+            BackBtn.UseVisualStyleBackColor = true;
+            BackBtn.Click += BackBtn_Click;
+            // 
             // LoanInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(992, 571);
+            Controls.Add(BackBtn);
             Controls.Add(textBox3);
             Controls.Add(dateTimePicker1);
             Controls.Add(EIDBtn);
@@ -214,5 +228,6 @@
         private TextBox textBox1;
         private DateTimePicker dateTimePicker1;
         private TextBox textBox3;
+        private Button BackBtn;
     }
 }
