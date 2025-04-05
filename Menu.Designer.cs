@@ -30,8 +30,8 @@
         {
             LoanInfoBtn = new Button();
             DeptInfoBtn = new Button();
-            button3 = new Button();
             EmployeesBtn = new TextBox();
+            EmployeeInfoBtn = new Button();
             SuspendLayout();
             // 
             // LoanInfoBtn
@@ -58,18 +58,6 @@
             DeptInfoBtn.UseVisualStyleBackColor = true;
             DeptInfoBtn.Click += DeptInfoBtn_Click;
             // 
-            // button3
-            // 
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            button3.Location = new Point(151, 436);
-            button3.Name = "button3";
-            button3.Size = new Size(215, 52);
-            button3.TabIndex = 2;
-            button3.Text = "Employee's Information";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
             // EmployeesBtn
             // 
             EmployeesBtn.BackColor = Color.LightCyan;
@@ -82,14 +70,26 @@
             EmployeesBtn.Text = "EMPLOYEE'S INFORMATION";
             EmployeesBtn.TextAlign = HorizontalAlignment.Center;
             // 
+            // EmployeeInfoBtn
+            // 
+            EmployeeInfoBtn.FlatStyle = FlatStyle.Popup;
+            EmployeeInfoBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
+            EmployeeInfoBtn.Location = new Point(151, 406);
+            EmployeeInfoBtn.Name = "EmployeeInfoBtn";
+            EmployeeInfoBtn.Size = new Size(215, 58);
+            EmployeeInfoBtn.TabIndex = 4;
+            EmployeeInfoBtn.Text = "Employee's Information";
+            EmployeeInfoBtn.UseVisualStyleBackColor = true;
+            EmployeeInfoBtn.Click += EmployeeInfoBtn_Click;
+            // 
             // MenuInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(561, 613);
+            Controls.Add(EmployeeInfoBtn);
             Controls.Add(EmployeesBtn);
-            Controls.Add(button3);
             Controls.Add(DeptInfoBtn);
             Controls.Add(LoanInfoBtn);
             FormBorderStyle = FormBorderStyle.None;
@@ -104,7 +104,7 @@
 
         private Button LoanInfoBtn;
         private Button DeptInfoBtn;
-        private Button button3;
         private TextBox EmployeesBtn;
+        private Button EmployeeInfoBtn;
     }
 }

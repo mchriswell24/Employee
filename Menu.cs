@@ -24,17 +24,25 @@ namespace Employee
 
         private void LoanInfoBtn_Click(object sender, EventArgs e)
         {
+            LoanInfo loaInfoForm = new LoanInfo();
+            loaInfoForm.Show();
 
+            this.Hide();
         }
 
         private void DeptInfoBtn_Click(object sender, EventArgs e)
         {
+            DeptInfo deptInfoForm = new DeptInfo();
+            deptInfoForm.Show();
 
+            this.Hide();
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void EmployeeInfoBtn_Click(object sender, EventArgs e)
         {
+            EmployeeInfo empInfoForm = new EmployeeInfo();
+            empInfoForm.Show();
 
+            this.Hide();
         }
     }
 }

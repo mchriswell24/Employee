@@ -12,6 +12,8 @@ namespace Employee
 {
     public partial class DeptInfo : Form
     {
+        MySQLConnector mmm = new MySQLConnector();
+
         public DeptInfo()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace Employee
 
         private void DeptInfo_Load(object sender, EventArgs e)
         {
+            dataGridView2.DataSource = mmm.Fetchdepartmentinfo();
 
         }
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)

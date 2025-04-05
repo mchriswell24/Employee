@@ -12,6 +12,8 @@ namespace Employee
 {
     public partial class LoanInfo : Form
     {
+        MySQLConnector mmm = new MySQLConnector();
+
         public LoanInfo()
         {
             InitializeComponent();
@@ -19,6 +21,7 @@ namespace Employee
 
         private void LoanInfo_Load(object sender, EventArgs e)
         {
+            dataGridView3.DataSource = mmm.Fetchloan();
 
         }
 
