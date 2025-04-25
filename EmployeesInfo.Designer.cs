@@ -65,7 +65,7 @@
             // 
             DeleteBtn.FlatStyle = FlatStyle.Popup;
             DeleteBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            DeleteBtn.Location = new Point(887, 504);
+            DeleteBtn.Location = new Point(887, 409);
             DeleteBtn.Name = "DeleteBtn";
             DeleteBtn.Size = new Size(75, 36);
             DeleteBtn.TabIndex = 40;
@@ -77,7 +77,7 @@
             // 
             UpdateBtn.FlatStyle = FlatStyle.Popup;
             UpdateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            UpdateBtn.Location = new Point(704, 504);
+            UpdateBtn.Location = new Point(704, 409);
             UpdateBtn.Name = "UpdateBtn";
             UpdateBtn.Size = new Size(86, 36);
             UpdateBtn.TabIndex = 39;
@@ -224,7 +224,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(350, 161);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(612, 322);
+            dataGridView1.Size = new Size(612, 228);
             dataGridView1.TabIndex = 24;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -267,7 +267,7 @@
             // 
             EditBtn.FlatStyle = FlatStyle.Popup;
             EditBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            EditBtn.Location = new Point(526, 504);
+            EditBtn.Location = new Point(526, 409);
             EditBtn.Name = "EditBtn";
             EditBtn.Size = new Size(75, 36);
             EditBtn.TabIndex = 47;
@@ -278,7 +278,7 @@
             // 
             CreateBtn.FlatStyle = FlatStyle.Popup;
             CreateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            CreateBtn.Location = new Point(350, 504);
+            CreateBtn.Location = new Point(350, 409);
             CreateBtn.Name = "CreateBtn";
             CreateBtn.Size = new Size(75, 36);
             CreateBtn.TabIndex = 57;
@@ -290,7 +290,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
-            ClientSize = new Size(992, 571);
+            ClientSize = new Size(992, 509);
             Controls.Add(CreateBtn);
             Controls.Add(EditBtn);
             Controls.Add(BackBtn);

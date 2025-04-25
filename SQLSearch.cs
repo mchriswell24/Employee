@@ -7,12 +7,11 @@ namespace Employee
 {
     public class SQLSearch
     {
-        string connectionString = "datasource=127.0.0.1;port=3307;username=root;password=;database=employee";
+        string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=employee";
 
-        // Search Employees
         public void SearchEmployee(string searchTerm, DataGridView dataGridView)
         {
-            string query = @"SELECT * FROM employee WHERE 
+            string query = @"SELECT * FROM employeeinfo WHERE 
                             Eid LIKE @SearchTerm OR 
                             Name LIKE @SearchTerm OR 
                             Position LIKE @SearchTerm OR 

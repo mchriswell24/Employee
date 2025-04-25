@@ -13,6 +13,7 @@ namespace Employee
     public partial class EmployeesInfo : Form
     {
         MySQLConnector mmm = new MySQLConnector();
+        SQLSearch search = new SQLSearch();
 
         public EmployeesInfo()
         {
@@ -27,11 +28,15 @@ namespace Employee
         private void EmployeesInfo_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = mmm.Fetchemployeeinfo();
-
         }
-
+        private void PerformSearch()
+        {
+            string searchTerm = SearchBtn.Text;
+            search.SearchEmployee(searchTerm, dataGridView1);
+        }
         private void SearchBtn_TextChanged(object sender, EventArgs e)
         {
+            PerformSearch();
 
         }
 

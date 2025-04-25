@@ -47,7 +47,7 @@
             // 
             DeleteBtn.FlatStyle = FlatStyle.Popup;
             DeleteBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            DeleteBtn.Location = new Point(887, 499);
+            DeleteBtn.Location = new Point(647, 417);
             DeleteBtn.Name = "DeleteBtn";
             DeleteBtn.Size = new Size(75, 36);
             DeleteBtn.TabIndex = 40;
@@ -58,7 +58,7 @@
             // 
             UpdateBtn.FlatStyle = FlatStyle.Popup;
             UpdateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            UpdateBtn.Location = new Point(697, 499);
+            UpdateBtn.Location = new Point(457, 417);
             UpdateBtn.Name = "UpdateBtn";
             UpdateBtn.Size = new Size(86, 36);
             UpdateBtn.TabIndex = 39;
@@ -82,9 +82,9 @@
             dataGridView2.BackgroundColor = Color.Azure;
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(350, 149);
+            dataGridView2.Location = new Point(472, 216);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(612, 322);
+            dataGridView2.Size = new Size(250, 129);
             dataGridView2.TabIndex = 24;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
@@ -145,7 +145,7 @@
             // 
             BackBtn.FlatStyle = FlatStyle.Popup;
             BackBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            BackBtn.Location = new Point(929, -1);
+            BackBtn.Location = new Point(859, -2);
             BackBtn.Name = "BackBtn";
             BackBtn.Size = new Size(66, 37);
             BackBtn.TabIndex = 44;
@@ -157,7 +157,7 @@
             // 
             CreateBtn.FlatStyle = FlatStyle.Popup;
             CreateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            CreateBtn.Location = new Point(350, 499);
+            CreateBtn.Location = new Point(110, 417);
             CreateBtn.Name = "CreateBtn";
             CreateBtn.Size = new Size(75, 36);
             CreateBtn.TabIndex = 45;
@@ -168,7 +168,7 @@
             // 
             EditBtn.FlatStyle = FlatStyle.Popup;
             EditBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            EditBtn.Location = new Point(515, 499);
+            EditBtn.Location = new Point(275, 417);
             EditBtn.Name = "EditBtn";
             EditBtn.Size = new Size(75, 36);
             EditBtn.TabIndex = 46;
@@ -180,7 +180,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
-            ClientSize = new Size(992, 571);
+            ClientSize = new Size(926, 505);
             Controls.Add(EditBtn);
             Controls.Add(CreateBtn);
             Controls.Add(BackBtn);
