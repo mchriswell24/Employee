@@ -135,7 +135,7 @@
             // 
             // textBox8
             // 
-            textBox8.BackColor = Color.LightCyan;
+            textBox8.BackColor = Color.MediumAquamarine;
             textBox8.BorderStyle = BorderStyle.None;
             textBox8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox8.Location = new Point(30, 450);
@@ -147,7 +147,7 @@
             // 
             // textBox7
             // 
-            textBox7.BackColor = Color.LightCyan;
+            textBox7.BackColor = Color.MediumAquamarine;
             textBox7.BorderStyle = BorderStyle.None;
             textBox7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox7.Location = new Point(30, 316);
@@ -159,7 +159,7 @@
             // 
             // textBox6
             // 
-            textBox6.BackColor = Color.LightCyan;
+            textBox6.BackColor = Color.MediumAquamarine;
             textBox6.BorderStyle = BorderStyle.None;
             textBox6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox6.Location = new Point(30, 367);
@@ -171,7 +171,7 @@
             // 
             // textBox5
             // 
-            textBox5.BackColor = Color.LightCyan;
+            textBox5.BackColor = Color.MediumAquamarine;
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox5.Location = new Point(30, 407);
@@ -183,7 +183,7 @@
             // 
             // textBox4
             // 
-            textBox4.BackColor = Color.LightCyan;
+            textBox4.BackColor = Color.MediumAquamarine;
             textBox4.BorderStyle = BorderStyle.None;
             textBox4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox4.Location = new Point(30, 264);
@@ -195,7 +195,7 @@
             // 
             // textBox3
             // 
-            textBox3.BackColor = Color.LightCyan;
+            textBox3.BackColor = Color.MediumAquamarine;
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox3.Location = new Point(30, 222);
@@ -207,7 +207,7 @@
             // 
             // textBox2
             // 
-            textBox2.BackColor = Color.LightCyan;
+            textBox2.BackColor = Color.MediumAquamarine;
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox2.Location = new Point(30, 173);
@@ -230,7 +230,7 @@
             // 
             // SearchBtn
             // 
-            SearchBtn.BackColor = Color.Azure;
+            SearchBtn.BackColor = Color.MintCream;
             SearchBtn.BorderStyle = BorderStyle.None;
             SearchBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             SearchBtn.Location = new Point(55, 113);
@@ -242,7 +242,7 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.LightCyan;
+            textBox1.BackColor = Color.MediumAquamarine;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe Script", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(311, 31);
@@ -289,7 +289,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightCyan;
+            BackColor = Color.MediumAquamarine;
             ClientSize = new Size(992, 509);
             Controls.Add(CreateBtn);
             Controls.Add(EditBtn);
