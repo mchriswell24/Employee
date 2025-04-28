@@ -23,7 +23,7 @@ namespace Employee
             ExecuteSearch(query, searchTerm, dataGridView);
         }
 
-        // Search Loans
+       
         public void SearchLoan(string searchTerm, DataGridView dataGridView)
         {
             string query = @"SELECT * FROM loan WHERE 
@@ -34,7 +34,7 @@ namespace Employee
             ExecuteSearch(query, searchTerm, dataGridView);
         }
 
-        // Search Departments
+     
         public void SearchDepartment(string searchTerm, DataGridView dataGridView)
         {
             string query = @"SELECT * FROM department WHERE 
@@ -44,7 +44,6 @@ namespace Employee
             ExecuteSearch(query, searchTerm, dataGridView);
         }
 
-        // Shared Search Execution Method
         private void ExecuteSearch(string query, string searchTerm, DataGridView dataGridView)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))

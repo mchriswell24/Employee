@@ -51,5 +51,68 @@ namespace Employee
             menuForm.Show();
             this.Close();
         }
+
+        private void RetrieveBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string deptCode = DeptCodeBtn.Text.Trim();
+
+                if (string.IsNullOrEmpty(deptCode))
+                {
+                    MessageBox.Show("Please enter a Department Code to retrieve.");
+                    return;
+                }
+
+                Retrieve retrieve = new Retrieve(); // Create Retrieve object
+                DataTable dt = retrieve.RetrieveDepartment(deptCode); // New method we will add
+
+                if (dt.Rows.Count > 0)
+                {
+                    DeptDescriBtn.Text = dt.Rows[0]["DeptDescription"].ToString(); // Fill the description textbox
+                    MessageBox.Show("Department retrieved successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("No department found with that code.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving department: " + ex.Message);
+            }
+        }
+
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string deptCode = DeptCodeBtn.Text.Trim();
+                string deptDescription = DeptDescriBtn.Text.Trim();
+
+                if (string.IsNullOrEmpty(deptCode) || string.IsNullOrEmpty(deptDescription))
+                {
+                    MessageBox.Show("Please fill in both Dept Code and Dept Description.");
+                    return;
+                }
+
+                Add add = new Add();
+                add.AddDepartment(deptCode, deptDescription);
+
+                MessageBox.Show("Department added successfully!");
+
+                dataGridView2.DataSource = mmm.Fetchdepartmentinfo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding department: " + ex.Message);
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

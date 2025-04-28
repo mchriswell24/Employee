@@ -30,8 +30,6 @@
         {
             EIDBtn = new TextBox();
             textBox2 = new TextBox();
-            DeleteBtn = new Button();
-            UpdateBtn = new Button();
             LoanAmountBtn = new TextBox();
             textBox8 = new TextBox();
             dataGridView3 = new DataGridView();
@@ -40,8 +38,9 @@
             dateTimePicker1 = new DateTimePicker();
             textBox3 = new TextBox();
             BackBtn = new Button();
-            CreateBtn = new Button();
-            EditBtn = new Button();
+            RetrieveBtn = new Button();
+            AddBtn = new Button();
+            DeleteBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             SuspendLayout();
             // 
@@ -55,7 +54,7 @@
             // 
             // textBox2
             // 
-            textBox2.BackColor = Color.LightCyan;
+            textBox2.BackColor = Color.MediumAquamarine;
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox2.Location = new Point(24, 234);
@@ -64,30 +63,6 @@
             textBox2.TabIndex = 51;
             textBox2.Text = "LOAN AMOUNT";
             textBox2.TextAlign = HorizontalAlignment.Center;
-            // 
-            // DeleteBtn
-            // 
-            DeleteBtn.FlatStyle = FlatStyle.Popup;
-            DeleteBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            DeleteBtn.Location = new Point(604, 384);
-            DeleteBtn.Name = "DeleteBtn";
-            DeleteBtn.Size = new Size(75, 36);
-            DeleteBtn.TabIndex = 50;
-            DeleteBtn.Text = "Delete";
-            DeleteBtn.UseVisualStyleBackColor = true;
-            DeleteBtn.Click += DeleteBtn_Click;
-            // 
-            // UpdateBtn
-            // 
-            UpdateBtn.FlatStyle = FlatStyle.Popup;
-            UpdateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            UpdateBtn.Location = new Point(416, 384);
-            UpdateBtn.Name = "UpdateBtn";
-            UpdateBtn.Size = new Size(86, 36);
-            UpdateBtn.TabIndex = 49;
-            UpdateBtn.Text = "Update";
-            UpdateBtn.UseVisualStyleBackColor = true;
-            UpdateBtn.Click += UpdateBtn_Click;
             // 
             // LoanAmountBtn
             // 
@@ -99,7 +74,7 @@
             // 
             // textBox8
             // 
-            textBox8.BackColor = Color.LightCyan;
+            textBox8.BackColor = Color.MediumAquamarine;
             textBox8.BorderStyle = BorderStyle.None;
             textBox8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox8.Location = new Point(52, 176);
@@ -111,7 +86,7 @@
             // 
             // dataGridView3
             // 
-            dataGridView3.BackgroundColor = Color.Azure;
+            dataGridView3.BackgroundColor = Color.Aquamarine;
             dataGridView3.BorderStyle = BorderStyle.None;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Location = new Point(433, 154);
@@ -134,7 +109,7 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.LightCyan;
+            textBox1.BackColor = Color.MediumAquamarine;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe Script", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(359, 43);
@@ -153,7 +128,7 @@
             // 
             // textBox3
             // 
-            textBox3.BackColor = Color.LightCyan;
+            textBox3.BackColor = Color.MediumAquamarine;
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
             textBox3.Location = new Point(52, 305);
@@ -175,43 +150,56 @@
             BackBtn.UseVisualStyleBackColor = true;
             BackBtn.Click += BackBtn_Click;
             // 
-            // CreateBtn
+            // RetrieveBtn
             // 
-            CreateBtn.FlatStyle = FlatStyle.Popup;
-            CreateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            CreateBtn.Location = new Point(67, 384);
-            CreateBtn.Name = "CreateBtn";
-            CreateBtn.Size = new Size(75, 36);
-            CreateBtn.TabIndex = 56;
-            CreateBtn.Text = "Create";
-            CreateBtn.UseVisualStyleBackColor = true;
+            RetrieveBtn.FlatStyle = FlatStyle.Popup;
+            RetrieveBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            RetrieveBtn.Location = new Point(433, 346);
+            RetrieveBtn.Name = "RetrieveBtn";
+            RetrieveBtn.Size = new Size(90, 33);
+            RetrieveBtn.TabIndex = 56;
+            RetrieveBtn.Text = "Retrieve";
+            RetrieveBtn.UseVisualStyleBackColor = true;
+            RetrieveBtn.Click += RetrieveBtn_Click;
             // 
-            // EditBtn
+            // AddBtn
             // 
-            EditBtn.FlatStyle = FlatStyle.Popup;
-            EditBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            EditBtn.Location = new Point(239, 384);
-            EditBtn.Name = "EditBtn";
-            EditBtn.Size = new Size(75, 36);
-            EditBtn.TabIndex = 57;
-            EditBtn.Text = "Edit";
-            EditBtn.UseVisualStyleBackColor = true;
+            AddBtn.FlatStyle = FlatStyle.Popup;
+            AddBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            AddBtn.Location = new Point(565, 346);
+            AddBtn.Name = "AddBtn";
+            AddBtn.Size = new Size(75, 33);
+            AddBtn.TabIndex = 57;
+            AddBtn.Text = "Add";
+            AddBtn.UseVisualStyleBackColor = true;
+            AddBtn.Click += AddBtn_Click;
+            // 
+            // DeleteBtn
+            // 
+            DeleteBtn.FlatStyle = FlatStyle.Popup;
+            DeleteBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            DeleteBtn.Location = new Point(681, 346);
+            DeleteBtn.Name = "DeleteBtn";
+            DeleteBtn.Size = new Size(75, 33);
+            DeleteBtn.TabIndex = 60;
+            DeleteBtn.Text = "Delete";
+            DeleteBtn.UseVisualStyleBackColor = true;
+            DeleteBtn.Click += DeleteBtn_Click;
             // 
             // LoanInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightCyan;
+            BackColor = Color.MediumAquamarine;
             ClientSize = new Size(897, 450);
-            Controls.Add(EditBtn);
-            Controls.Add(CreateBtn);
+            Controls.Add(DeleteBtn);
+            Controls.Add(AddBtn);
+            Controls.Add(RetrieveBtn);
             Controls.Add(BackBtn);
             Controls.Add(textBox3);
             Controls.Add(dateTimePicker1);
             Controls.Add(EIDBtn);
             Controls.Add(textBox2);
-            Controls.Add(DeleteBtn);
-            Controls.Add(UpdateBtn);
             Controls.Add(LoanAmountBtn);
             Controls.Add(textBox8);
             Controls.Add(dataGridView3);
@@ -230,8 +218,6 @@
 
         private TextBox EIDBtn;
         private TextBox textBox2;
-        private Button DeleteBtn;
-        private Button UpdateBtn;
         private TextBox LoanAmountBtn;
         private TextBox textBox8;
         private DataGridView dataGridView3;
@@ -240,7 +226,8 @@
         private DateTimePicker dateTimePicker1;
         private TextBox textBox3;
         private Button BackBtn;
-        private Button CreateBtn;
-        private Button EditBtn;
+        private Button RetrieveBtn;
+        private Button AddBtn;
+        private Button DeleteBtn;
     }
 }

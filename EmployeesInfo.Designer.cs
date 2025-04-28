@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             AddressBtn = new TextBox();
-            DeleteBtn = new Button();
-            UpdateBtn = new Button();
             DeptCodeBtn = new TextBox();
             AgeBtn = new TextBox();
             SalBtn = new TextBox();
@@ -48,8 +46,9 @@
             SearchBtn = new TextBox();
             textBox1 = new TextBox();
             BackBtn = new Button();
-            EditBtn = new Button();
-            CreateBtn = new Button();
+            RetrieveBtn = new Button();
+            AddBtn = new Button();
+            DeleteBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -60,30 +59,6 @@
             AddressBtn.Size = new Size(100, 23);
             AddressBtn.TabIndex = 41;
             AddressBtn.TextChanged += AddressBtn_TextChanged;
-            // 
-            // DeleteBtn
-            // 
-            DeleteBtn.FlatStyle = FlatStyle.Popup;
-            DeleteBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            DeleteBtn.Location = new Point(887, 409);
-            DeleteBtn.Name = "DeleteBtn";
-            DeleteBtn.Size = new Size(75, 36);
-            DeleteBtn.TabIndex = 40;
-            DeleteBtn.Text = "Delete";
-            DeleteBtn.UseVisualStyleBackColor = true;
-            DeleteBtn.Click += DeleteBtn_Click;
-            // 
-            // UpdateBtn
-            // 
-            UpdateBtn.FlatStyle = FlatStyle.Popup;
-            UpdateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            UpdateBtn.Location = new Point(704, 409);
-            UpdateBtn.Name = "UpdateBtn";
-            UpdateBtn.Size = new Size(86, 36);
-            UpdateBtn.TabIndex = 39;
-            UpdateBtn.Text = "Update";
-            UpdateBtn.UseVisualStyleBackColor = true;
-            UpdateBtn.Click += UpdateBtn_Click;
             // 
             // DeptCodeBtn
             // 
@@ -219,7 +194,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = Color.Azure;
+            dataGridView1.BackgroundColor = Color.Aquamarine;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(350, 161);
@@ -263,27 +238,41 @@
             BackBtn.UseVisualStyleBackColor = true;
             BackBtn.Click += BackBtn_Click;
             // 
-            // EditBtn
+            // RetrieveBtn
             // 
-            EditBtn.FlatStyle = FlatStyle.Popup;
-            EditBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            EditBtn.Location = new Point(526, 409);
-            EditBtn.Name = "EditBtn";
-            EditBtn.Size = new Size(75, 36);
-            EditBtn.TabIndex = 47;
-            EditBtn.Text = "Edit";
-            EditBtn.UseVisualStyleBackColor = true;
+            RetrieveBtn.FlatStyle = FlatStyle.Popup;
+            RetrieveBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            RetrieveBtn.Location = new Point(350, 419);
+            RetrieveBtn.Name = "RetrieveBtn";
+            RetrieveBtn.Size = new Size(89, 42);
+            RetrieveBtn.TabIndex = 43;
+            RetrieveBtn.Text = "Retrieve";
+            RetrieveBtn.UseVisualStyleBackColor = true;
+            RetrieveBtn.Click += RetrieveBtn_Click;
             // 
-            // CreateBtn
+            // AddBtn
             // 
-            CreateBtn.FlatStyle = FlatStyle.Popup;
-            CreateBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            CreateBtn.Location = new Point(350, 409);
-            CreateBtn.Name = "CreateBtn";
-            CreateBtn.Size = new Size(75, 36);
-            CreateBtn.TabIndex = 57;
-            CreateBtn.Text = "Create";
-            CreateBtn.UseVisualStyleBackColor = true;
+            AddBtn.FlatStyle = FlatStyle.Popup;
+            AddBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            AddBtn.Location = new Point(511, 419);
+            AddBtn.Name = "AddBtn";
+            AddBtn.Size = new Size(75, 42);
+            AddBtn.TabIndex = 58;
+            AddBtn.Text = "Add";
+            AddBtn.UseVisualStyleBackColor = true;
+            AddBtn.Click += AddBtn_Click;
+            // 
+            // DeleteBtn
+            // 
+            DeleteBtn.FlatStyle = FlatStyle.Popup;
+            DeleteBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            DeleteBtn.Location = new Point(651, 419);
+            DeleteBtn.Name = "DeleteBtn";
+            DeleteBtn.Size = new Size(75, 42);
+            DeleteBtn.TabIndex = 59;
+            DeleteBtn.Text = "Delete";
+            DeleteBtn.UseVisualStyleBackColor = true;
+            DeleteBtn.Click += DeleteBtn_Click;
             // 
             // EmployeesInfo
             // 
@@ -291,12 +280,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumAquamarine;
             ClientSize = new Size(992, 509);
-            Controls.Add(CreateBtn);
-            Controls.Add(EditBtn);
+            Controls.Add(DeleteBtn);
+            Controls.Add(AddBtn);
+            Controls.Add(RetrieveBtn);
             Controls.Add(BackBtn);
             Controls.Add(AddressBtn);
-            Controls.Add(DeleteBtn);
-            Controls.Add(UpdateBtn);
             Controls.Add(DeptCodeBtn);
             Controls.Add(AgeBtn);
             Controls.Add(SalBtn);
@@ -325,8 +313,6 @@
         #endregion
 
         private TextBox AddressBtn;
-        private Button DeleteBtn;
-        private Button UpdateBtn;
         private TextBox DeptCodeBtn;
         private TextBox AgeBtn;
         private TextBox SalBtn;
@@ -344,7 +330,8 @@
         private TextBox SearchBtn;
         private TextBox textBox1;
         private Button BackBtn;
-        private Button EditBtn;
-        private Button CreateBtn;
+        private Button RetrieveBtn;
+        private Button AddBtn;
+        private Button DeleteBtn;
     }
 }

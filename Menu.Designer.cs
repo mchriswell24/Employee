@@ -60,7 +60,7 @@
             // 
             // EmployeesBtn
             // 
-            EmployeesBtn.BackColor = Color.LightCyan;
+            EmployeesBtn.BackColor = Color.MediumAquamarine;
             EmployeesBtn.BorderStyle = BorderStyle.None;
             EmployeesBtn.Font = new Font("Segoe Script", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             EmployeesBtn.Location = new Point(41, 61);
@@ -86,7 +86,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightCyan;
+            BackColor = Color.MediumAquamarine;
             ClientSize = new Size(561, 613);
             Controls.Add(EmployeeInfoBtn);
             Controls.Add(EmployeesBtn);
