@@ -33,7 +33,7 @@
             LoanAmountBtn = new TextBox();
             textBox8 = new TextBox();
             dataGridView3 = new DataGridView();
-            SearchBtn = new TextBox();
+            SearchBox = new TextBox();
             textBox1 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             textBox3 = new TextBox();
@@ -95,17 +95,16 @@
             dataGridView3.TabIndex = 45;
             dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
-            // SearchBtn
+            // SearchBox
             // 
-            SearchBtn.BackColor = Color.Azure;
-            SearchBtn.BorderStyle = BorderStyle.None;
-            SearchBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            SearchBtn.Location = new Point(64, 101);
-            SearchBtn.Name = "SearchBtn";
-            SearchBtn.Size = new Size(474, 22);
-            SearchBtn.TabIndex = 44;
-            SearchBtn.Text = "Search:";
-            SearchBtn.TextChanged += SearchBtn_TextChanged;
+            SearchBox.BackColor = Color.Azure;
+            SearchBox.BorderStyle = BorderStyle.None;
+            SearchBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            SearchBox.Location = new Point(64, 101);
+            SearchBox.Name = "SearchBox";
+            SearchBox.Size = new Size(474, 22);
+            SearchBox.TabIndex = 44;
+            SearchBox.TextChanged += SearchBox_TextChanged;
             // 
             // textBox1
             // 
@@ -203,7 +202,7 @@
             Controls.Add(LoanAmountBtn);
             Controls.Add(textBox8);
             Controls.Add(dataGridView3);
-            Controls.Add(SearchBtn);
+            Controls.Add(SearchBox);
             Controls.Add(textBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "LoanInfo";
@@ -221,7 +220,7 @@
         private TextBox LoanAmountBtn;
         private TextBox textBox8;
         private DataGridView dataGridView3;
-        private TextBox SearchBtn;
+        private TextBox SearchBox;
         private TextBox textBox1;
         private DateTimePicker dateTimePicker1;
         private TextBox textBox3;

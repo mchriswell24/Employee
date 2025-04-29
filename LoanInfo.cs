@@ -15,6 +15,7 @@ namespace Employee
         MySQLConnector mmm = new MySQLConnector();
         Add add = new Add();
         Retrieve retrieve = new Retrieve();
+        SQLSearch search = new SQLSearch();
 
         public LoanInfo()
         {
@@ -27,9 +28,22 @@ namespace Employee
 
         }
 
-        private void SearchBtn_TextChanged(object sender, EventArgs e)
+        private void PerformSearch()
         {
-
+            string searchTerm = SearchBox.Text.Trim();
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                search.SearchEmployee(searchTerm, dataGridView3);
+            }
+            else
+            {
+                // Load all employees again if search is empty
+                dataGridView3.DataSource = mmm.Fetchemployeeinfo();
+            }
+        }
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            PerformSearch();
         }
 
         private void EIDBtn_TextChanged(object sender, EventArgs e)
@@ -110,7 +124,28 @@ namespace Employee
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int Eid = int.Parse(EIDBtn.Text);
 
+                Delete delete = new Delete();
+                delete.DeleteLoan(Eid);
+
+                MessageBox.Show("Loan deleted successfully!");
+
+                // Refresh grid
+                dataGridView3.DataSource = mmm.Fetchloan();
+
+                // Clear fields
+                EIDBtn.Clear();
+                LoanAmountBtn.Clear();
+                dateTimePicker1.Value = DateTime.Today;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
     }
 }

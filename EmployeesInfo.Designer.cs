@@ -43,7 +43,7 @@
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             dataGridView1 = new DataGridView();
-            SearchBtn = new TextBox();
+            SearchBox = new TextBox();
             textBox1 = new TextBox();
             BackBtn = new Button();
             RetrieveBtn = new Button();
@@ -203,17 +203,16 @@
             dataGridView1.TabIndex = 24;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // SearchBtn
+            // SearchBox
             // 
-            SearchBtn.BackColor = Color.MintCream;
-            SearchBtn.BorderStyle = BorderStyle.None;
-            SearchBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            SearchBtn.Location = new Point(55, 113);
-            SearchBtn.Name = "SearchBtn";
-            SearchBtn.Size = new Size(474, 22);
-            SearchBtn.TabIndex = 23;
-            SearchBtn.Text = "Search:";
-            SearchBtn.TextChanged += SearchBtn_TextChanged;
+            SearchBox.BackColor = Color.MintCream;
+            SearchBox.BorderStyle = BorderStyle.None;
+            SearchBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            SearchBox.Location = new Point(55, 113);
+            SearchBox.Name = "SearchBox";
+            SearchBox.Size = new Size(474, 22);
+            SearchBox.TabIndex = 23;
+            SearchBox.TextChanged += SearchBox_TextChanged;
             // 
             // textBox1
             // 
@@ -299,7 +298,7 @@
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(dataGridView1);
-            Controls.Add(SearchBtn);
+            Controls.Add(SearchBox);
             Controls.Add(textBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EmployeesInfo";
@@ -327,7 +326,7 @@
         private TextBox textBox3;
         private TextBox textBox2;
         private DataGridView dataGridView1;
-        private TextBox SearchBtn;
+        private TextBox SearchBox;
         private TextBox textBox1;
         private Button BackBtn;
         private Button RetrieveBtn;

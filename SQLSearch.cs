@@ -12,36 +12,37 @@ namespace Employee
         public void SearchEmployee(string searchTerm, DataGridView dataGridView)
         {
             string query = @"SELECT * FROM employeeinfo WHERE 
-                            Eid LIKE @SearchTerm OR 
-                            Name LIKE @SearchTerm OR 
-                            Position LIKE @SearchTerm OR 
-                            Salary LIKE @SearchTerm OR 
-                            Age LIKE @SearchTerm OR 
-                            Address LIKE @SearchTerm OR 
-                            DeptCode LIKE @SearchTerm";
+                    CAST(Eid AS CHAR) LIKE @SearchTerm OR 
+                    Name LIKE @SearchTerm OR 
+                    Position LIKE @SearchTerm OR 
+                    CAST(Salary AS CHAR) LIKE @SearchTerm OR 
+                    CAST(Age AS CHAR) LIKE @SearchTerm OR 
+                    Address LIKE @SearchTerm OR 
+                    DeptCode LIKE @SearchTerm";
 
             ExecuteSearch(query, searchTerm, dataGridView);
         }
 
-       
-        public void SearchLoan(string searchTerm, DataGridView dataGridView)
+
+
+        public void SearchLoan(string searchTerm, DataGridView dataGridView3)
         {
             string query = @"SELECT * FROM loan WHERE 
                             Eid LIKE @SearchTerm OR 
                             LoanAmount LIKE @SearchTerm OR 
                             Date LIKE @SearchTerm";
 
-            ExecuteSearch(query, searchTerm, dataGridView);
+            ExecuteSearch(query, searchTerm, dataGridView3);
         }
 
      
-        public void SearchDepartment(string searchTerm, DataGridView dataGridView)
+        public void SearchDepartment(string searchTerm, DataGridView dataGridView2)
         {
             string query = @"SELECT * FROM department WHERE 
                             DeptCode LIKE @SearchTerm OR 
                             DeptDescription LIKE @SearchTerm";
 
-            ExecuteSearch(query, searchTerm, dataGridView);
+            ExecuteSearch(query, searchTerm, dataGridView2);
         }
 
         private void ExecuteSearch(string query, string searchTerm, DataGridView dataGridView)

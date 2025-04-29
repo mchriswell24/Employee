@@ -13,14 +13,29 @@ namespace Employee
     public partial class DeptInfo : Form
     {
         MySQLConnector mmm = new MySQLConnector();
+        SQLSearch search = new SQLSearch();
 
         public DeptInfo()
         {
             InitializeComponent();
         }
 
-        private void SearchBtn_TextChanged(object sender, EventArgs e)
+        private void PerformSearch()
         {
+            string searchTerm = SearchBox.Text.Trim();
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                search.SearchEmployee(searchTerm, dataGridView2);
+            }
+            else
+            {
+                // Load all employees again if search is empty
+                dataGridView2.DataSource = mmm.Fetchemployeeinfo();
+            }
+        }
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            PerformSearch();
 
         }
 
@@ -112,7 +127,30 @@ namespace Employee
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string deptCode = DeptCodeBtn.Text.Trim();
 
+                if (string.IsNullOrEmpty(deptCode))
+                {
+                    MessageBox.Show("Please enter a Department Code to delete.");
+                    return;
+                }
+
+                Delete delete = new Delete();
+                delete.DeleteDepartment(deptCode);
+
+                MessageBox.Show("Department deleted successfully!");
+
+                dataGridView2.DataSource = mmm.Fetchdepartmentinfo(); // Refresh
+                DeptCodeBtn.Text = "";
+                DeptDescriBtn.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
     }
 }

@@ -30,7 +30,7 @@
         {
             textBox8 = new TextBox();
             dataGridView2 = new DataGridView();
-            SearchBtn = new TextBox();
+            SearchBox = new TextBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             DeptDescriBtn = new TextBox();
@@ -59,23 +59,22 @@
             dataGridView2.BackgroundColor = Color.Aquamarine;
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(472, 216);
+            dataGridView2.Location = new Point(370, 185);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(250, 129);
+            dataGridView2.Size = new Size(465, 157);
             dataGridView2.TabIndex = 24;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
-            // SearchBtn
+            // SearchBox
             // 
-            SearchBtn.BackColor = Color.Azure;
-            SearchBtn.BorderStyle = BorderStyle.None;
-            SearchBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            SearchBtn.Location = new Point(55, 101);
-            SearchBtn.Name = "SearchBtn";
-            SearchBtn.Size = new Size(474, 22);
-            SearchBtn.TabIndex = 23;
-            SearchBtn.Text = "Search:";
-            SearchBtn.TextChanged += SearchBtn_TextChanged;
+            SearchBox.BackColor = Color.Azure;
+            SearchBox.BorderStyle = BorderStyle.None;
+            SearchBox.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            SearchBox.Location = new Point(55, 101);
+            SearchBox.Name = "SearchBox";
+            SearchBox.Size = new Size(474, 22);
+            SearchBox.TabIndex = 23;
+            SearchBox.TextChanged += SearchBox_TextChanged;
             // 
             // textBox1
             // 
@@ -181,7 +180,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox8);
             Controls.Add(dataGridView2);
-            Controls.Add(SearchBtn);
+            Controls.Add(SearchBox);
             Controls.Add(textBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DeptInfo";
@@ -195,7 +194,7 @@
         #endregion
         private TextBox textBox8;
         private DataGridView dataGridView2;
-        private TextBox SearchBtn;
+        private TextBox SearchBox;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox DeptDescriBtn;

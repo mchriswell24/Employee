@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Employee
@@ -22,60 +16,38 @@ namespace Employee
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void EmployeesInfo_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = mmm.Fetchemployeeinfo();
         }
+
         private void PerformSearch()
         {
-            string searchTerm = SearchBtn.Text;
-            search.SearchEmployee(searchTerm, dataGridView1);
+            string searchTerm = SearchBox.Text.Trim();
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                search.SearchEmployee(searchTerm, dataGridView1);
+            }
+            else
+            {
+                dataGridView1.DataSource = mmm.Fetchemployeeinfo();
+            }
         }
-        private void SearchBtn_TextChanged(object sender, EventArgs e)
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
         {
             PerformSearch();
-
         }
 
-        private void EDIBtn_TextChanged(object sender, EventArgs e)
-        {
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
-        }
-
-        private void NameBtn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PosBtn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SalBtn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AgeBtn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddressBtn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DeptCodeBtn_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void EDIBtn_TextChanged(object sender, EventArgs e) { }
+        private void NameBtn_TextChanged(object sender, EventArgs e) { }
+        private void PosBtn_TextChanged(object sender, EventArgs e) { }
+        private void SalBtn_TextChanged(object sender, EventArgs e) { }
+        private void AgeBtn_TextChanged(object sender, EventArgs e) { }
+        private void AddressBtn_TextChanged(object sender, EventArgs e) { }
+        private void DeptCodeBtn_TextChanged(object sender, EventArgs e) { }
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
@@ -118,13 +90,13 @@ namespace Employee
         {
             try
             {
-                int Eid = int.Parse(EDIBtn.Text);             
-                string name = NameBtn.Text;                     
-                string position = PosBtn.Text;                  
-                decimal salary = decimal.Parse(SalBtn.Text);    
-                int age = int.Parse(AgeBtn.Text);             
-                string address = AddressBtn.Text;             
-                string deptCode = DeptCodeBtn.Text;            
+                int Eid = int.Parse(EDIBtn.Text);
+                string name = NameBtn.Text;
+                string position = PosBtn.Text;
+                decimal salary = decimal.Parse(SalBtn.Text);
+                int age = int.Parse(AgeBtn.Text);
+                string address = AddressBtn.Text;
+                string deptCode = DeptCodeBtn.Text;
 
                 add.AddEmployee(Eid, name, position, salary, age, address, deptCode);
 
@@ -142,7 +114,7 @@ namespace Employee
         {
             try
             {
-                int Eid = int.Parse(EDIBtn.Text); 
+                int Eid = int.Parse(EDIBtn.Text);
 
                 Delete delete = new Delete();
                 delete.DeleteEmployee(Eid);
@@ -156,9 +128,5 @@ namespace Employee
                 MessageBox.Show(ex.Message);
             }
         }
-
     }
-
 }
-
-
